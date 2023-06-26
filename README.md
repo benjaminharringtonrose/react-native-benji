@@ -1,6 +1,6 @@
 # **React Native Form Components**
 
-`react-native-form-components` is an expo-supported react native component library, designed to be used with `react-hook-form`.
+`react-native-form-components` is an expo-supported react native component library, all form components are designed to be used with `react-hook-form`.
 
 This library includes many components:
 

@@ -1,6 +1,6 @@
-# **Sunnova Components**
+# **React Native Form Components**
 
-`sunnova-components` is an expo-supported react native component library for the MySunnova app.
+`react-native-form-components` is an expo-supported react native component library, designed to be used with `react-hook-form`.
 
 This library includes many components:
 
@@ -46,4 +46,4 @@ export default function App() {
 
 There are many examples available here:
 
-https://github.com/sunnova-benjirose/sunnova-components/tree/master/example
+https://github.com/benjaminharringtonrose/react-native-form-components/tree/master/example

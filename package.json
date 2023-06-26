@@ -13,8 +13,7 @@
     "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
-    "reset": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'yarn.lock' -type f -delete && find . -name 'Podfile.lock' -type f -delete",
-    "deploy": "npm version patch && npm publish"
+    "reset": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'yarn.lock' -type f -delete && find . -name 'Podfile.lock' -type f -delete"
   },
   "repository": "https://github.com/benjaminharringtonrose/react-native-hook-form-components",
   "homepage": "https://github.com/benjaminharringtonrose/react-native-hook-form-components",

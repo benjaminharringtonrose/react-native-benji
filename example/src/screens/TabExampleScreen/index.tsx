@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { View } from "react-native";
-import { TabSelector } from "react-native-rhf-components";
+import { TabSelector } from "react-native-benji";
 
 import styles from "./styles";
 

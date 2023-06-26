@@ -4,7 +4,6 @@ import { useNavigation } from "@react-navigation/native";
 import { isEmpty } from "lodash";
 import React, { FC, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import {
   FormSection,
   FormMaskedInput,
@@ -16,7 +15,8 @@ import {
   FormMultiPicklist,
   FormMultiLineInput,
   FormRadioButtons,
-} from "react-native-rhf-components";
+} from "react-native-benji";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import * as yup from "yup";
 
 import styles from "./styles";

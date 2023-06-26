@@ -5,13 +5,13 @@ import LottieView from "lottie-react-native";
 import React, { FC, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { SafeAreaView, View } from "react-native";
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import {
   Button,
   FormInput,
   FormPasswordInput,
   FormSection,
-} from "react-native-rhf-components";
+} from "react-native-benji";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import * as yup from "yup";
 
 import styles from "./styles";

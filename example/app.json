@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-rhf-components",
-    "slug": "react-native-rhf-components",
+    "name": "react-native-benji",
+    "slug": "react-native-benji",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",

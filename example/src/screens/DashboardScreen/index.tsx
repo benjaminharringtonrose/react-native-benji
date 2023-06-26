@@ -2,11 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import LottieView from "lottie-react-native";
 import React, { FC, useState } from "react";
 import { View } from "react-native";
-import {
-  Button,
-  AsyncStepModal,
-  IWizardItem,
-} from "react-native-rhf-components";
+import { Button, AsyncStepModal, IWizardItem } from "react-native-benji";
 
 import StepOne from "./StepOne";
 import StepThree from "./StepThree";

@@ -11,7 +11,7 @@ import {
   ReturnKeyTypeOptions,
   TouchableOpacity,
 } from "react-native";
-import { PasswordStrengthIndicator } from "react-native-rhf-components";
+import { PasswordStrengthIndicator } from "react-native-benji";
 
 import styles from "./styles";
 import { Color } from "../../constants";

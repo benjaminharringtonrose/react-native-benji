@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-form-components",
-    "slug": "react-native-form-components",
+    "name": "react-native-rhf-components",
+    "slug": "react-native-rhf-components",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",

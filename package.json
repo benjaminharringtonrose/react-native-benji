@@ -1,0 +1,110 @@
+{
+  "name": "react-native-hook-form-components",
+  "version": "1.0.53",
+  "description": "A react native component library using React Hook Form",
+  "main": "lib/index",
+  "source": "lib/index",
+  "types": "lib/types",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "reset": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'yarn.lock' -type f -delete && find . -name 'Podfile.lock' -type f -delete"
+  },
+  "repository": "https://github.com/benjaminharringtonrose/react-native-hook-form-components",
+  "homepage": "https://github.com/benjaminharringtonrose/react-native-hook-form-components",
+  "author": "Benjamin Rose",
+  "dependencies": {
+    "@expo/vector-icons": "13.0.0"
+  },
+  "devDependencies": {
+    "react-hook-form": "^7.44.3",
+    "react-native-modal": "^13.0.1",
+    "react-native-mask-text": "^0.14.1",
+    "@gorhom/bottom-sheet": "^4.4.7",
+    "react-native-portalize": "^1.0.7",
+    "react-native-reanimated": "~2.14.4",
+    "@react-native-community/datetimepicker": "6.7.3",
+    "react-native-modal-datetime-picker": "^15.0.1",
+    "@hookform/resolvers": "^3.1.0",
+    "@react-native-community/eslint-config": "^3.0.2",
+    "@types/jest": "^28.1.2",
+    "@types/react": "18.2.13",
+    "@types/react-native": "0.72.2",
+    "deprecated-react-native-prop-types": "^3.0.1",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "expo-module-scripts": "^3.0.4",
+    "jest": "^29.2.1",
+    "pod-install": "^0.1.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.9.4",
+    "yarn": "^1.22.19"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "lottie-react-native": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-mask-text": "*",
+    "react-native-orientation-locker": "*",
+    "@gorhom/bottom-sheet": "*",
+    "react-native-portalize": "*",
+    "react-native-reanimated": "*",
+    "react-hook-form": "*",
+    "@react-native-community/datetimepicker": "*",
+    "react-native-modal-datetime-picker": "*",
+    "react-native-modal": "*"
+  },
+  "resolutions": {
+    "@types/react": "18.2.13",
+    "@types/react-native": "0.72.2"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native-community",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": false,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ],
+      "react/no-unstable-nested-components": "off",
+      "react-native/no-inline-styles": "off"
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "expo-module-scripts/tsconfig.base",
+  "compilerOptions": {
+    "outDir": "lib",
+    "strict": true,
+    "module": "esnext",
+    "declaration": true,
+    "declarationDir": "lib/types",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"]
+}

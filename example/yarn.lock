@@ -9002,10 +9002,10 @@ react-native-animatable@1.3.3:
   dependencies:
     prop-types "^15.7.2"
 
-react-native-benji@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-benji/-/react-native-benji-1.0.0.tgz#c0aa29c8bff20f706633c60323146499e844fa96"
-  integrity sha512-wyAvDf5uQrIaO2V0JluUzJICvvvCHO5R+lespnPdnAik4WzRRM5iMeUE+TdrxpoiYgrxmYPL/AAm2bBmtndGaw==
+react-native-benji@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-benji/-/react-native-benji-1.0.1.tgz#98825e85dccd4eaf118827133c820debfcf8c255"
+  integrity sha512-/gprYtpN83BYC19PiQxNwRDGbA/QcN4+YP/OicPIXMzqC3oHjCJdPYB2WSAVdTas8EyTf8tUIZoym5aBqeZTSA==
   dependencies:
     "@expo/vector-icons" "13.0.0"
 

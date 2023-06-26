@@ -1,6 +1,6 @@
 {
-  "name": "react-native-hook-form-components",
-  "version": "1.0.53",
+  "name": "react-native-rhf-components",
+  "version": "1.0.0",
   "description": "A react native component library using React Hook Form",
   "main": "lib/index",
   "source": "lib/index",
@@ -13,7 +13,8 @@
     "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
-    "reset": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'yarn.lock' -type f -delete && find . -name 'Podfile.lock' -type f -delete"
+    "reset": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'yarn.lock' -type f -delete && find . -name 'Podfile.lock' -type f -delete",
+    "deploy": "npm run build && npm version patch && npm publish"
   },
   "repository": "https://github.com/benjaminharringtonrose/react-native-hook-form-components",
   "homepage": "https://github.com/benjaminharringtonrose/react-native-hook-form-components",
@@ -53,7 +54,6 @@
     "react-native": "*",
     "react-native-gesture-handler": "*",
     "react-native-mask-text": "*",
-    "react-native-orientation-locker": "*",
     "@gorhom/bottom-sheet": "*",
     "react-native-portalize": "*",
     "react-native-reanimated": "*",

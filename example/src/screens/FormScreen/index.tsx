@@ -16,7 +16,7 @@ import {
   FormMultiPicklist,
   FormMultiLineInput,
   FormRadioButtons,
-} from "sunnova-components";
+} from "react-native-rhf-components";
 import * as yup from "yup";
 
 import styles from "./styles";

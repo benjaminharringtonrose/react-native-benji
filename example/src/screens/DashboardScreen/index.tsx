@@ -2,7 +2,11 @@ import { useNavigation } from "@react-navigation/native";
 import LottieView from "lottie-react-native";
 import React, { FC, useState } from "react";
 import { View } from "react-native";
-import { Button, AsyncStepModal, IWizardItem } from "sunnova-components";
+import {
+  Button,
+  AsyncStepModal,
+  IWizardItem,
+} from "react-native-rhf-components";
 
 import StepOne from "./StepOne";
 import StepThree from "./StepThree";
@@ -100,7 +104,7 @@ const DashboardScreen: FC = () => {
         style={styles.buttonMargin}
       />
       <Button
-        label="Orientation"
+        label="Login"
         onPress={() => navigation.navigate(Routes.Login)}
         borderColor={Color.medDarkGrey}
         style={styles.buttonMargin}

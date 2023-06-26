@@ -5,7 +5,6 @@ import { Host } from "react-native-portalize";
 import { RecoilRoot } from "recoil";
 
 import { Toast } from "./src/components";
-import { OrientationListener } from "./src/listeners/OrientationListener";
 import { RootNavigator } from "./src/navigation/RootNavigator";
 
 export default function App() {
@@ -18,7 +17,6 @@ export default function App() {
         </NavigationContainer>
       </Host>
       <Toast />
-      <OrientationListener />
     </RecoilRoot>
   );
 }

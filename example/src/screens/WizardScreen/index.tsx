@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { FC } from "react";
-import { Wizard, IWizardItem } from "sunnova-components";
+import { Wizard, IWizardItem } from "react-native-rhf-components";
 
 import { Cart, Billing, Shipping, Payment } from "./WizardContent";
 import { Color } from "../../constants/Color";

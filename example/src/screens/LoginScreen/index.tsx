@@ -1,20 +1,29 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigation } from "@react-navigation/native";
+import LottieView from "lottie-react-native";
 import React, { FC, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { SafeAreaView } from "react-native";
-import { OrientationType } from "react-native-orientation-locker";
-import { useRecoilValue } from "recoil";
+import { SafeAreaView, View } from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import {
+  Button,
+  FormInput,
+  FormPasswordInput,
+  FormSection,
+} from "react-native-rhf-components";
 import * as yup from "yup";
 
-import LandscapeLogin from "./LandscapeLogin";
-import PortraitLogin from "./PortraitLogin";
 import styles from "./styles";
-import { settingsState } from "../../atoms/settings";
+import { Color } from "../../constants";
 import { useMockRequest } from "../../hooks/useMockRequest";
 import { usePrevious } from "../../hooks/usePrevious";
 import { LoginNavProp } from "../../navigation/types";
+
+const TITLE = "Welcome Back!";
+
+const DESCRIPTION =
+  "Some user instructions may go here and it can wrap multiple times. Here's some more text to fill it up.";
 
 export interface ILoginForm {
   email: string;
@@ -34,7 +43,6 @@ const DEFAULT_VALUES: ILoginForm = {
 const LoginScreen: FC = () => {
   const navigation = useNavigation<LoginNavProp>();
   const { loading, error, onRequest } = useMockRequest();
-  const { orientation } = useRecoilValue(settingsState);
 
   const { control, handleSubmit, setFocus, formState } = useForm({
     defaultValues: DEFAULT_VALUES,
@@ -43,10 +51,6 @@ const LoginScreen: FC = () => {
   });
 
   const { errors } = formState;
-
-  const isLandscape =
-    orientation === OrientationType["LANDSCAPE-LEFT"] ||
-    orientation === OrientationType["LANDSCAPE-RIGHT"];
 
   const prevLoading = usePrevious<boolean>(loading);
   useEffect(() => {
@@ -61,31 +65,54 @@ const LoginScreen: FC = () => {
     onRequest();
   };
 
-  if (isLandscape) {
-    return (
-      <SafeAreaView style={styles.root}>
-        <LandscapeLogin
-          control={control}
-          errors={errors}
-          handleSubmit={handleSubmit}
-          onSubmit={onSubmit}
-          setFocus={setFocus}
-          loading={loading}
-        />
-      </SafeAreaView>
-    );
-  }
-
   return (
     <SafeAreaView style={styles.root}>
-      <PortraitLogin
-        control={control}
-        errors={errors}
-        handleSubmit={handleSubmit}
-        onSubmit={onSubmit}
-        setFocus={setFocus}
-        loading={loading}
-      />
+      <KeyboardAwareScrollView
+        style={{ flex: 1, backgroundColor: Color.white }}
+        showsVerticalScrollIndicator={false}
+        extraScrollHeight={50}
+      >
+        <LottieView
+          autoPlay
+          source={require("../../../assets/lottie/login.json")}
+          style={{
+            alignSelf: "center",
+            width: 200,
+            height: 200,
+          }}
+        />
+        <FormSection title={TITLE} description={DESCRIPTION}>
+          <View>
+            <FormInput
+              name="email"
+              label="Email"
+              control={control}
+              error={errors.email}
+              returnKeyType="next"
+              onSubmitEditing={() => setFocus("password")}
+              style={[styles.marginTop]}
+            />
+            <FormPasswordInput
+              name="password"
+              label="Password"
+              control={control}
+              error={errors.password}
+              returnKeyType="done"
+              onSubmitEditing={handleSubmit(onSubmit)}
+              style={styles.marginTop}
+              showPasswordValidator
+            />
+          </View>
+        </FormSection>
+        <Button
+          label="SUBMIT"
+          onPress={handleSubmit(onSubmit)}
+          labelColor={Color.white}
+          backgroundColor={Color.primary}
+          loading={loading}
+          style={{ marginHorizontal: 10, marginBottom: 30 }}
+        />
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   );
 };
